@@ -72,43 +72,44 @@
 
 **2) Create/Start Mongo Container:**
 
-A) CREATE MONGO CONTAINER
-	+ docker run --name spring-demo-mongo -p 27017:27017 --network=spring_demo_net -v /home/ubuntu/mongo-data:/data/db -d mongo 
-	+ check if running : docker ps
-	OR
-B) START MONGO CONTAINER
-	* docker ps -a
-	* docker start -ai 11cc47339ee1er 
-	* connect the client with the IP/Host IP
-	* with hypervisor ensure port forwarding is done for mongo port to access from outside if ubuntu
+	A) CREATE MONGO CONTAINER
+		+ docker run --name spring-demo-mongo -p 27017:27017 --network=spring_demo_net -v /home/ubuntu/mongo-data:/data/db -d mongo 
+		+ check if running : docker ps
+		OR
+	B) START MONGO CONTAINER
+		* docker ps -a
+		* docker start -ai 11cc47339ee1er 
+		* connect the client with the IP/Host IP
+		* with hypervisor ensure port forwarding is done for mongo port to access from outside if ubuntu
 
 **3) Create/Start Microservices**
 	+ start registry on 8765
 	+ start library on random port
 	+ start gateway on 8761
 	+ start the UI
-A) Build Images : 
-	Assuming the jars are ready for each: mvn clean package on each project if not
-	cd /e/Naveen_Home/FSE_HOME/Docker/FSE_FINAL_CODE/registry
-	docker build --tag=registry-1.0 .
-	cd /e/Naveen_Home/FSE_HOME/Docker/FSE_FINAL_CODE/gateway
-	docker build --tag=gateway-1.0 .
-	cd /e/Naveen_Home/FSE_HOME/Docker/FSE_FINAL_CODE/library
-	docker build --tag=library-1.0 .
-	docker images
+	
+	A) Build Images : 
+		Assuming the jars are ready for each: mvn clean package on each project if not
+		cd /e/Naveen_Home/FSE_HOME/Docker/FSE_FINAL_CODE/registry
+		docker build --tag=registry-1.0 .
+		cd /e/Naveen_Home/FSE_HOME/Docker/FSE_FINAL_CODE/gateway
+		docker build --tag=gateway-1.0 .
+		cd /e/Naveen_Home/FSE_HOME/Docker/FSE_FINAL_CODE/library
+		docker build --tag=library-1.0 .
+		docker images
 
-B) Run Images :
-	docker run -d --name registry --network=spring_demo_net -p 8761:8761  registry-1.0
-	docker run -d --name gateway --network=spring_demo_net --add-host="localhost:192.168.99.100" -p 8765:8765  gateway-1.0 .
-	docker run -d --name library --network=spring_demo_net library-1.0 .  
+	B) Run Images :
+		docker run -d --name registry --network=spring_demo_net -p 8761:8761  registry-1.0
+		docker run -d --name gateway --network=spring_demo_net --add-host="localhost:192.168.99.100" -p 8765:8765  gateway-1.0 .
+		docker run -d --name library --network=spring_demo_net library-1.0 .  
 
-C) Build and Run UI Image
+	C) Build and Run UI Image
 
-	cd /e/Naveen_Home/FSE_HOME/Docker/FSE_FINAL_CODE/library-admin-ui
-	docker build -t naveen/library-admin-ui .
-	docker run --network=spring_demo_net -p 4200:4200 -d naveen/library-admin-ui
+		cd /e/Naveen_Home/FSE_HOME/Docker/FSE_FINAL_CODE/library-admin-ui
+		docker build -t naveen/library-admin-ui .
+		docker run --network=spring_demo_net -p 4200:4200 -d naveen/library-admin-ui
 
-4) Testing the services are up:
+**4) Testing the services are up:**
 	1) Check if discovery is started: 	http://192.168.99.100:8761/ 
 	2) check if library is registered in eureka after starting on random port
 	3) check if the gateay is registerd in discovery : http://192.168.99.100:8761/
