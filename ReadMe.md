@@ -112,12 +112,13 @@
 **Assuming the step 3 A Build Images is done, you can run : docker-compose up to bring up all containers and services in one go.**
 
 **4) Testing the services are up:**
-	+ Check if discovery is started: http://192.168.99.100:8761/ 
-	+ check if library is registered in eureka after starting on random port
-	+ check if the gateay is registerd in discovery : http://192.168.99.100:8761/
-	+ docker logs <> to check the running logs
-	+ http://192.168.99.100:8765/fse/book
-	+ http://dev-fse.service.com:4200/available-books
+
++ Check if discovery is started: http://192.168.99.100:8761/ 
++ check if library is registered in eureka after starting on random port
++ check if the gateay is registerd in discovery : http://192.168.99.100:8761/
++ docker logs <> to check the running logs
++ http://192.168.99.100:8765/fse/book
++ http://dev-fse.service.com:4200/available-books
 
        
 	
