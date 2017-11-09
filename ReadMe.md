@@ -109,15 +109,15 @@
 		docker build -t naveen/library-admin-ui .
 		docker run --network=spring_demo_net -p 4200:4200 -d naveen/library-admin-ui
 		
-**Assuming the step 3 A Build Images is done, you can run : docker-compose up to bring up all containers and services in one go.
+**Assuming the step 3 A Build Images is done, you can run : docker-compose up to bring up all containers and services in one go.**
 
 **4) Testing the services are up:**
-	1) Check if discovery is started: 	http://192.168.99.100:8761/ 
-	2) check if library is registered in eureka after starting on random port
-	3) check if the gateay is registerd in discovery : http://192.168.99.100:8761/
-	4) docker logs <> to check the running logs
-	5) http://192.168.99.100:8765/fse/book
-	6) http://dev-fse.service.com:4200/available-books
+	+ Check if discovery is started: http://192.168.99.100:8761/ 
+	+ check if library is registered in eureka after starting on random port
+	+ check if the gateay is registerd in discovery : http://192.168.99.100:8761/
+	+ docker logs <> to check the running logs
+	+ http://192.168.99.100:8765/fse/book
+	+ http://dev-fse.service.com:4200/available-books
 
        
 	
