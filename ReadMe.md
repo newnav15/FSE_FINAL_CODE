@@ -50,21 +50,21 @@ naveen15
 ********************************************************************************
 # C) Docker command sets:
 ********************************************************************************
-	List Images: docker images
-	Remove all container, create blank slate: docker system prune 
-	remove inactive containers: docker rm $(docker ps -aq)
-	remove images: docker rmi $(docker images -q)
-	Get the IPAddress of docker machine : docker inspect spring-demo-mongo | grep IPAddress
-	List of stopped containers : docker ps -a gets 
-	List the env : docker-machine ls
-	# As of Docker v1.3 you can attach to a bash shell
-	docker exec -it  2e23d01384ac  bash
-	Start Containers: 
-			docker ps -a
-	 		docker start -ai 11cc47339ee1er 
-	docker-compose up
-	docker network ls
-	docker-compose scale discovery-service=2
++List Images: docker images
++Remove all container, create blank slate: docker system prune 
++remove inactive containers: docker rm $(docker ps -aq)
++remove images: docker rmi $(docker images -q)
++Get the IPAddress of docker machine : docker inspect spring-demo-mongo | grep IPAddress
++List of stopped containers : docker ps -a gets 
++List the env : docker-machine ls
++ # As of Docker v1.3 you can attach to a bash shell
++docker exec -it  2e23d01384ac  bash
++Start Containers: 
+		+docker ps -a
+		+docker start -ai 11cc47339ee1er 
++docker-compose up
++docker network ls
++docker-compose scale discovery-service=2
 ********************************************************************************	
 	Multi container setup for microservices with angularJS and mongo
 ********************************************************************************
