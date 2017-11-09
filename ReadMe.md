@@ -1,5 +1,5 @@
 ********************************************************************************
-A) Windows Docker Setup
+# A) Windows Docker Setup 
 ********************************************************************************
 	1)	Install the Docker tool box
 	2)	Run mvn clean package from outside
@@ -14,9 +14,10 @@ A) Windows Docker Setup
 		c.	docker run -p 8080:8080 -t springio/gs-spring-boot-docker
 		d.	http://192.168.99.100:8080/ 
 ********************************************************************************
-B) Ubuntu Docker Setup
 ********************************************************************************
-Host Setup:
+# B) Ubuntu Docker Setup
+********************************************************************************
+
 	a) Download the image for ubuntu: from https://www.ubuntu.com/download/
 	b) Setup a ubuntu VM with virtual box ie hypervisor
 		* host only adaptor
