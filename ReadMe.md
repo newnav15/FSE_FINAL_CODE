@@ -30,23 +30,20 @@
 		sudo apt-get install java-package.
 		sudo apt-get install default-jdk
 
-**Docker Setup on host:**
-********************************************************************************
-+ apt-get update
-+ apt-get install -y docker.io
-+ service docker.io status
-+ docker version
-+ docker info to know number of containers and images
-+ OPTIONAL: incase you need to update docker : wget -q0 https://get.docker.com/gpg | apt-key add -naveen
-naveen15
-+ OPTIONAL add docker repo : echo deb http://get.docker.com/ubuntu docker main > etc/apt/sources.list.d/docker.list
-+ apt-get update
-+ OPTIONAL apt-get install install lxc-docker
-+ OPTIONAL incase space issue https://askubuntu.com/questions/944588/apt-get-f-install-no-space-left-on-device-ubuntu-14-04
-********************************************************************************	
-********************************************************************************
+	d) Docker Setup on host:
+		+ apt-get update
+		+ apt-get install -y docker.io
+		+ service docker.io status
+		+ docker version
+		+ docker info to know number of containers and images
+		+ OPTIONAL: incase you need to update docker : wget -q0 https://get.docker.com/gpg | apt-key add -naveen
+		naveen15
+		+ OPTIONAL add docker repo : echo deb http://get.docker.com/ubuntu docker main > etc/apt/sources.list.d/docker.list
+		+ apt-get update
+		+ OPTIONAL apt-get install install lxc-docker
+		+ OPTIONAL incase space issue https://askubuntu.com/questions/944588/apt-get-f-install-no-space-left-on-device-ubuntu-14-04
+
 # C) Docker command sets:
-********************************************************************************
 +List Images: docker images
 +Remove all container, create blank slate: docker system prune 
 +remove inactive containers: docker rm $(docker ps -aq)
