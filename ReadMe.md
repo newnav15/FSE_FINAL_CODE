@@ -33,7 +33,7 @@
 		sudo apt-get install java-package.
 		sudo apt-get install default-jdk
 
-# Docker Setup on host:
+**Docker Setup on host:**
 ********************************************************************************
 + apt-get update
 + apt-get install -y docker.io
