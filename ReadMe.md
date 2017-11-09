@@ -45,8 +45,10 @@ Docker Setup on host:
 		* apt-get update
 		* OPTIONAL apt-get install install lxc-docker
 		* OPTIONAL incase space issue https://askubuntu.com/questions/944588/apt-get-f-install-no-space-left-on-device-ubuntu-14-04
-********************************************************************************		
-Docker command sets:
+********************************************************************************	
+********************************************************************************
+# C) Docker command sets:
+********************************************************************************
 	List Images: docker images
 	Remove all container, create blank slate: docker system prune 
 	remove inactive containers: docker rm $(docker ps -aq)
