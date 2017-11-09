@@ -1,6 +1,6 @@
 
 # A) Windows Docker Setup 
-********************************************************************************
+
 	1)	Install the Docker tool box
 	2)	Run mvn clean package from outside
 	3)	Run java –jar <jarname>
