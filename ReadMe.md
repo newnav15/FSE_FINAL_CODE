@@ -31,6 +31,7 @@
 		sudo apt-get install default-jdk
 
 	d) Docker Setup on host:
+	
 		+ apt-get update
 		+ apt-get install -y docker.io
 		+ service docker.io status
