@@ -13,11 +13,8 @@
 		b.	Run mvn install dockerfile:build
 		c.	docker run -p 8080:8080 -t springio/gs-spring-boot-docker
 		d.	http://192.168.99.100:8080/ 
-********************************************************************************
-********************************************************************************
-# B) Ubuntu Docker Setup
-********************************************************************************
 
+# B) Ubuntu Docker Setup
 	a) Download the image for ubuntu: from https://www.ubuntu.com/download/
 	b) Setup a ubuntu VM with virtual box ie hypervisor
 		* host only adaptor
