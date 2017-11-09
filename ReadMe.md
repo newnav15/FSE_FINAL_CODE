@@ -84,6 +84,7 @@
 		* with hypervisor ensure port forwarding is done for mongo port to access from outside if ubuntu
 
 **3) Create/Start Microservices**
+
 	+ start registry on 8765
 	+ start library on random port
 	+ start gateway on 8761
