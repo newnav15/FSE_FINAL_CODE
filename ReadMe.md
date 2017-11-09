@@ -108,6 +108,8 @@
 		cd /e/Naveen_Home/FSE_HOME/Docker/FSE_FINAL_CODE/library-admin-ui
 		docker build -t naveen/library-admin-ui .
 		docker run --network=spring_demo_net -p 4200:4200 -d naveen/library-admin-ui
+		
+**Assuming the step 3 A Build Images is done, you can run : docker-compose up to bring up all containers and services in one go.
 
 **4) Testing the services are up:**
 	1) Check if discovery is started: 	http://192.168.99.100:8761/ 
